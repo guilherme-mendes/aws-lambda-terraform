@@ -1,28 +1,37 @@
-import boto3
 import os
 import json
-import logging
-
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("employee")
+import boto3
 
 
 def lambda_handler(event, context):
 
-    dynamodb = boto3.client('dynamodb')
-    paginator = dynamodb.get_paginator('scan')
-    params = {"TableName": os.environ.get('EMPLOYEE_TABLE')}
+    client = boto3.client('dynamodb')
 
-    items = []
-    for page in paginator.paginate(**params):
-        items.append(page['Items'])
+    response = client.scan(TableName=os.environ['EMPLOYEE_TABLE']);
+    employee_result_items = response["Items"]
 
-    resp = {
-        "statusCode": 200,
-        "body": json.dumps(items)
+    employee_results = []
+
+    for employee_result_item in employee_result_items:
+        id = employee_result_item["id"]["S"]
+        name = employee_result_item["name"]["S"]
+        age = employee_result_item["age"]["N"]
+        role = employee_result_item["role"]["S"]
+
+        employee_results.append({
+            'id': id,
+            'name   ': name,
+            'age': age,
+            'role': role
+        })
+
+    response = {
+        'statusCode': 200,
+        'headers': {
+            "x-custom-header": "my custom header value",
+            "Access-Control-Allow-Origin": "*"
+        },
+        'body': json.dumps(employee_results)
     }
-    
-    logger.info(f"resp: {resp}")
 
-    return resp
+    return response
