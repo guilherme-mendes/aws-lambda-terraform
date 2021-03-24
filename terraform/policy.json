@@ -13,7 +13,11 @@
      {
          "Effect": "Allow",
          "Action": [
-             "dynamodb:PutItem"
+            "dynamodb:Query",
+            "dynamodb:Scan",
+            "dynamodb:GetItem",
+            "dynamodb:PutItem",
+            "dynamodb:DeleteItem"
          ],
          "Resource": "arn:aws:dynamodb:*:*:table/EMPLOYEE"
      }
