@@ -18,7 +18,7 @@
 
 ## Utilização do projeto
 
-* Registro do funcionário
+* Registro de funcionário
 
 ```sh
 $ curl -X POST "https://x0l626xc2l.execute-api.us-east-1.amazonaws.com/prod/employee" -H 'Content-Type: application/json' -d'
@@ -29,7 +29,7 @@ $ curl -X POST "https://x0l626xc2l.execute-api.us-east-1.amazonaws.com/prod/empl
   "age": 30
 }'
 ```
-* Busca dos funcionários
+* Busca de funcionários
 
 ```sh
 $ curl -X GET "https://x0l626xc2l.execute-api.us-east-1.amazonaws.com/prod/employee"
