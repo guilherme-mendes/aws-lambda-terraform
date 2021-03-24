@@ -10,7 +10,7 @@
 
 ## Diagrama de Fluxo
 
-![diagram](diagram.png)
+![diagram](img/diagram.png)
 
 ## Requisitos
 
