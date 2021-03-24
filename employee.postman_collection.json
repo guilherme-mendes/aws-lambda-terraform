@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "c57025e0-6a66-49d5-bb8b-b9fc1d1babdf",
+		"name": "employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buscar funcionários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://x0l626xc2l.execute-api.us-east-1.amazonaws.com/prod/employee",
+					"protocol": "https",
+					"host": [
+						"x0l626xc2l",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar funcionários",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"1\",       \n  \"name\": \"Jose\",\n  \"role\": \"Gerente\",\n  \"age\": 40\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://x0l626xc2l.execute-api.us-east-1.amazonaws.com/prod/employee",
+					"protocol": "https",
+					"host": [
+						"x0l626xc2l",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
