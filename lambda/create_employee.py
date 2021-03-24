@@ -9,7 +9,7 @@ dynamodb_client = session.client('dynamodb')
 
 def lambda_handler(event, context):
     try:
-        print("event ->" + str(event))
+
         payload = json.loads(event["body"])
         print("payload ->" + str(payload))
         dynamodb_response = dynamodb_client.put_item(
@@ -32,11 +32,11 @@ def lambda_handler(event, context):
         print(dynamodb_response)
         return {
             'statusCode': 201,
-           'body': '{"status":"Employee created"}'
+           'body': '{"status":"Employee created!"}'
         }
     except Exception as e:
         logging.error(e)
         return {
             'statusCode': 500,
-           'body': '{"status":"Server error"}'
+           'body': '{"status":"Server error!"}'
         }

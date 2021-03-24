@@ -6,3 +6,4 @@ notes.txt
 terraform.tfstate*
 terraform.tfvars
 .terraform.*
+terraform/.terraform
