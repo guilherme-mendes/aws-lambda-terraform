@@ -42,6 +42,12 @@ $ curl -X GET "https://x0l626xc2l.execute-api.us-east-1.amazonaws.com/prod/emplo
 $ git clone https://github.com/guilherme-mendes/tech-ton-challenge.git
 $ cd tech-ton-challenge/terraform  
 ```
+
+* Configure conta AWS
+```sh
+$ configure aws
+```
+
 * Execute o terraform
 ```sh
 $ terraform init

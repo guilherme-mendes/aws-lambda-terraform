@@ -20,7 +20,7 @@ def lambda_handler(event, context):
 
         employee_results.append({
             'id': id,
-            'name   ': name,
+            'name': name,
             'age': age,
             'role': role
         })
