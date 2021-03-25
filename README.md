@@ -21,7 +21,7 @@
 * Registro de funcionário
 
 ```sh
-$ curl -X POST "https://x0l626xc2l.execute-api.us-east-1.amazonaws.com/prod/employee" -H 'Content-Type: application/json' -d'
+$ curl -X POST "https://j66g1ae0x0.execute-api.us-east-1.amazonaws.com/prod/employee" -H 'Content-Type: application/json' -d'
 {
   "id": "1", 
   "name": "Joao", 
@@ -32,7 +32,16 @@ $ curl -X POST "https://x0l626xc2l.execute-api.us-east-1.amazonaws.com/prod/empl
 * Busca de funcionários
 
 ```sh
-$ curl -X GET "https://x0l626xc2l.execute-api.us-east-1.amazonaws.com/prod/employee"
+$ curl -X GET "https://j66g1ae0x0.execute-api.us-east-1.amazonaws.com/prod/employee"
+```
+
+* Exclusão de funcionários
+
+```sh
+$ curl -X DELETE "https://j66g1ae0x0.execute-api.us-east-1.amazonaws.com/prod/employee/" -H 'Content-Type: application/json' -d' 
+{
+  "id": "1"
+}'
 ```
 
 ## Execução do projeto localmente

@@ -59,6 +59,38 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Remover funcionários",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j66g1ae0x0.execute-api.us-east-1.amazonaws.com/prod/employee",
+					"protocol": "https",
+					"host": [
+						"j66g1ae0x0",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"employee"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
