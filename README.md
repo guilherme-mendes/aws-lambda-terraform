@@ -1,4 +1,4 @@
-# Desafio Tecnologia TON
+# AWS lambda Terraform
 
 * Aplicação de gestão de funcionários.
 
